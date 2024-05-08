@@ -15,6 +15,7 @@ const DividerSmallStyled = styled(Divider)`
 
 const FooterButtons = styled.div`
   display: flex;
+  gap: var(--base-gap-small);
   justify-content: flex-end;
 `
 
