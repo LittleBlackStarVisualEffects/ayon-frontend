@@ -185,9 +185,11 @@ const NewUser = ({ onHide, open, onSuccess, accessGroupsData }) => {
           onChange={(key, value) => setFormData({ ...formData, [key]: value })}
           accessGroupsData={accessGroupsData}
         />
-        <SubTitleStyled>
-          Give this new user access to projects by adding access groups per project
-        </SubTitleStyled>
+        {formData?.userLevel === 'user' && (
+          <SubTitleStyled>
+            Give this new user access to projects by adding access groups per project
+          </SubTitleStyled>
+        )}
         {formData?.userLevel === 'user' && (
           <UserAccessGroupsForm
             // value expects multiple users, so we need to pass an object with the username "_" as the key
